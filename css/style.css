@@ -1,0 +1,244 @@
+:root {
+  --primary: rgb(45, 77, 202);
+  --primary-dark: rgb(31, 62, 114);
+  --img-background-primary:rgb(10, 153, 230);
+  --img-background-dark: rgb(44, 108, 220);
+  --poppins: "Poppins", sans-serif;
+  --triangle-color: rgb(244, 246, 251);
+  --icon-button-yellow: #ffd012;
+  --icon-yellow: #fffae5;
+}
+* {
+  font-family: var(--poppins);
+  font-weight: 300;
+}
+
+h1, h2 {
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+/* Navbar class*/
+.Navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  padding: 1rem;
+  min-height: 10rem;
+  position: fixed;
+  color: var(--primary);
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.navbar-link {
+  padding-right: 4rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.brand {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 8rem;
+}
+
+.toggle {
+  font-size: 2rem;
+  vertical-align: middle;
+  display: none;
+  padding: 0;
+}
+
+.navbar-items {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.navbar-items .navbar-link {
+  color: gray;
+  font-weight: 600;
+}
+
+.navbar-right {
+  margin-left: auto;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  height: 50%;
+  width: 12rem;
+  font-size: 1.3rem;
+  font-family: var(--poppins);
+}
+
+.container-medium {
+  display: flex;
+  flex-direction: row;
+  max-height: 100vh;
+}
+
+.content {
+  width: 51%;
+  height: 100vh;
+  padding: 0;
+}
+
+.content-text {
+  padding: 0 0 0 15%;
+}
+
+.content-text p {
+  font-weight: 600;
+  color: gray;
+  line-height: 3rem;
+  margin-top: 3rem;
+}
+
+.content-badge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content-btn .btn-icon {
+  margin-right: 1rem;
+  background-color: var(--icon-button-yellow);
+  background-position: bottom;
+  background-size: cover;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.3),
+              0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-btn i {
+  color: var(--icon-yellow);
+}
+
+.content-btn {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  flex: 1;
+}
+
+.container-btn {
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-top: 9rem solid var(--triangle-color);
+  border-left: 9rem solid transparent;
+  border-right: 9rem solid transparent;
+  margin-top: 7rem;
+  margin-left: 0;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 9rem solid transparent;
+  border-bottom: 9rem solid transparent;
+  border-right: 9rem solid var(--triangle-color);
+  position: absolute;
+  top: 50%;
+  right: 49%;
+  z-index: -1;
+}
+
+.content-img-one {
+  background: no-repeat center url(../img/about/nurseGirl.png), linear-gradient(90deg, rgba(10, 153, 230,1) 0%,rgba(44, 108, 220,1) 50%);
+  background-position: center;
+  background-size: auto 100vh;
+  width: 49%;
+}
+
+
+@media (max-width: 1265px) {
+  h1, h2 {
+    font-size: 3rem;
+  }
+  .navbar-items,
+  .Navbar {
+    flex-direction: column;
+    min-height: 6rem;
+  }
+
+
+
+  .navbar-items {
+    display: none;
+  }
+
+  .navbar-right,
+  .brand {
+    margin-left: 0;
+  }
+
+
+  .toggleShow {
+    display: flex;
+  }
+
+  .toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .container-medium {
+    display: block;
+  }
+
+  .content {
+    width: 100%;
+    height: 50%;
+  }
+
+  .content-text {
+    padding: 1rem;
+  }
+
+  .content-btn {
+    flex: none;
+    flex-basis: 100%;
+  }
+  
+  .content-img-one {
+    width: 100%;
+    height: 50vh;
+    background-size: auto 50vh;
+  }
+
+  .triangle-down {
+    margin-top: 5rem;
+    border-top: 5rem solid var(--triangle-color);
+    border-left: 5rem solid transparent;
+    border-right: 5rem solid transparent;
+  }
+
+  .triangle-right {
+    border-right: 5rem solid var(--triangle-color);
+    border-bottom: 5rem solid transparent;
+    border-top: 5rem solid transparent;
+    right: 0;
+    top: 25%;
+  }
+
+}
+
+
+
